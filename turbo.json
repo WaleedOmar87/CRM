@@ -1,0 +1,26 @@
+{
+  "$schema": "https://turborepo.org/schema.json",
+  "pipeline": {
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [".turbo/build.json", "dist/**"]
+    },
+    "lint": {},
+    "test": {
+      "dependsOn": ["^build"]
+    }
+  },
+  "projects": {
+    "frontend": {
+      "path": "apps/frontend",
+      "dependsOn": ["shared"]
+    },
+    "backend": {
+      "path": "apps/backend",
+      "dependsOn": ["shared"]
+    },
+    "shared": {
+      "path": "packages/shared"
+    }
+  }
+}

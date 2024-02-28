@@ -1,14 +1,16 @@
 {
   "name": "crm",
-  "version": "1.0.0",
-  "description": "CRM Project",
-  "main": "index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "dev:frontend": "turbo run dev --filter=frontend",
+    "dev:backend": "turbo run dev --filter=backend",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
   },
-  "keywords": [
-    "crm"
-  ],
-  "author": "Waleed Omar",
-  "license": "ISC"
+  "devDependencies": {
+    "turbo": "^1.0.0"
+  }
 }
