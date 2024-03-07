@@ -9,18 +9,5 @@
     "test": {
       "dependsOn": ["^build"]
     }
-  },
-  "projects": {
-    "frontend": {
-      "path": "apps/frontend",
-      "dependsOn": ["shared"]
-    },
-    "backend": {
-      "path": "apps/backend",
-      "dependsOn": ["shared"]
-    },
-    "shared": {
-      "path": "packages/shared"
-    }
   }
 }
